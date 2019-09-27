@@ -1,0 +1,19 @@
+<div class="animated fadeIn fast">
+    <a [routerLink]="['/heroes']" class="btn btn-outline-danger"> << Regresar</a>
+
+    <div class="row my-3">
+        <div class = "col-md-8 mx-auto">
+            <div class="card">
+                <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
+                <div class="card-body">
+                    <h5 class="card-title">{{ heroe.nombre | uppercase }} ({{ heroe.aparicion | date:'y' }})</h5>
+                    <p class="card-text">{{ heroe.bio }}</p>
+                    <div>
+                        <img [src]="ImgCasa" class="rounded float-left" [alt]="heroe.casa" style="width: 50px">
+                        <!--<img *ngIf="heroe.casa === 'DC'" src="assets/img/casa_dc.png" class="rounded float-right" [alt]="heroe.casa" style="width: 50px">-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
